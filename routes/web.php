@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,6 +24,19 @@ Route::get('/home', function () {
 Route::get('/test', function () {
     return view('test');
 });
+Route::any('category/create', [CategoryController::class, 'createCategory'])->name('createCategory');
+Route::get('categories', [CategoryController::class, 'allCategories'])->name('allCategories');
+Route::any('category/edit/{id}', [CategoryController::class, 'editCategory'])->name('editCategory');
+Route::get('category/delete/{id}', [CategoryController::class, 'deleteCategory'])->name('deleteCategory');
+
+
+
+
+
+
+
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

@@ -1,4 +1,5 @@
 import './bootstrap';
+import '../assets/js/bootstrap.min';
 
 import Alpine from 'alpinejs';
 

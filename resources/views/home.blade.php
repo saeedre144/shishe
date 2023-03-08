@@ -1,9 +1,8 @@
-<!-- Loopple Templates: https://www.loopple.com/templates | Copyright Loopple (https://www.loopple.com) | This copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Flowers Shop Ecommerce Website</title>
+    <title>Shishe Shop Ecommerce Website</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
     <link href="https://demos.creative-tim.com/soft-ui-design-system/assets/css/nucleo-icons.css" rel="stylesheet" />
@@ -14,6 +13,8 @@
 </head>
 
 <body>
+{{--upper nav --}}
+
 <div class="navbar bg-gradient-dark py-1">
     <div class="container">
         <div class="d-flex w-lg-50 w-100 text-lg-start text-center justify-content-lg-start justify-content-center mb-lg-0 mb-2">
@@ -35,35 +36,46 @@
             <span class="text-sm text-white ms-2">+1 3232 4343</span>
 
             <i class="fa fa-envelope text-sm text-white ms-4" aria-hidden="true"></i>
-            <span class="text-sm text-white ms-2 me-lg-0 me-auto">loopple@loopple.com</span>
+            <span class="text-sm text-white ms-2 me-lg-0 me-auto">Saeed@Saeed.com</span>
         </div>
     </div>
 </div>
 
+{{--Main nav--}}
 
-<nav class="bg-white">
+
+
+
+<nav class="">
     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-between">
             <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 <!-- Mobile menu button-->
-                <button type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+
+                <button  onclick="myFunction()"  class="inline-flex items-center justify-center  rounded-md p-2  focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" >
                     <span class="sr-only">Open main menu</span>
+
+
                     <!--
                       Icon when menu is closed.
 
                       Menu open: "hidden", Menu closed: "block"
                     -->
-                    <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <svg id="menu-button-close" class="block h-6 " fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                     </svg>
+
+
                     <!--
                       Icon when menu is open.
 
                       Menu open: "block", Menu closed: "hidden"
                     -->
-                    <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <svg id="menu-button-open" class="hidden h-6 " fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
+
+
                 </button>
             </div>
             <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
@@ -71,31 +83,30 @@
                     <img class="block h-8 w-auto lg:hidden" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
                     <img class="hidden h-8 w-auto lg:block" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
                 </div>
-                <div class="hidden sm:ml-6 sm:block">
+                <div class="hidden sm:ml-6 sm:block ">
                     <div class="flex space-x-4">
                         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                        <a href="#" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Dashboard</a>
+                        <a href="#" class=" text-black rounded-md px-3 py-2 text-sm text-bold hover:bg-indigo-500 hover:text-white" aria-current="page">Products</a>
 
-                        <a href="#" class="text-gray-800 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Team</a>
+                        <a href="#" class="text-gray-800 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Contact Us</a>
 
-                        <a href="#" class="text-gray-800 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Projects</a>
+                        <a href="#" class="text-gray-800 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">About Us</a>
 
-                        <a href="#" class="text-gray-800 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Calendar</a>
+                        <a href="{{url('/')}}" class="text-gray-800 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Home Page</a>
                     </div>
                 </div>
             </div>
             <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
 
 
-                <!-- Profile dropdown -->
+                <!-- Language dropdown -->
                 <div class="relative mr-3">
 
 
-                    <div class="border-t border-gray-200 py-6 px-4">
+                    <div class="mr-4">
                         <a href="#" class="-m-2 flex items-center p-2">
-                            <span class="fi fi-gr"></span> <span class="fi fi-gr fis"></span>
-                            <img src="https://tailwindui.com/img/flags/flag-canada.svg" alt="" class="block h-auto w-5 flex-shrink-0" />
-                            <span class="ml-3 block text-base font-medium text-gray-900">CAD</span>
+                            <span class="fi fi-tr"></span>
+                            <span class="ml-3 block text-base font-medium text-gray-900">Turkish</span>
                             <span class="sr-only">, change currency</span>
                         </a>
                     </div>
@@ -108,16 +119,17 @@
     <div class="sm:hidden" id="mobile-menu">
         <div class="space-y-1 px-2 pt-2 pb-3">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            <a href="#" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Dashboard</a>
+            <a href="#" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Products</a>
 
-            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Team</a>
+            <a href="#" class="text-gray-800  block rounded-md px-3 py-2 text-base font-medium">Contact us</a>
 
-            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Projects</a>
+            <a href="#" class="text-gray-800  block rounded-md px-3 py-2 text-base font-medium">About Us</a>
 
-            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Calendar</a>
+            <a href="#" class="text-gray-800  block rounded-md px-3 py-2 text-base font-medium">Home Page</a>
         </div>
     </div>
 </nav>
+
 
 
 
@@ -129,10 +141,10 @@
             <div class="row">
                 <div class="col-lg-6 my-auto text-white text-xl-left">
                     <h1 class="text-dark display-2
- font-weight-bolder mb-4">Find your own happiness</h1>
+                            font-weight-bolder mb-4">Find your own happiness</h1>
                     <p class="text-dark mb-0">Get 50% Off for your first purchase</p>
-                    <p class="text-dark font-weight-bolder text-lg">FLOWER50</p>
-                    <button type="submit" class="btn bg-gradient-primary mt-3 mb-0">Shop now</button>
+                    <p class="text-dark font-weight-bolder text-lg">SKY TRADE</p>
+                    <button  class="btn bg-gradient-primary mt-3 hover:bg-gray-700 ">Show Products</button>
                 </div>
                 <div class="col-lg-6">
                     <div class="positio-absolute rounded-circle end-4 top-0 mt-n4 shadow-lg d-xl-block d-none" style="background-image: url('https://images.unsplash.com/photo-1617176756162-447320192d98?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1180&amp;q=80');width: 600px;height: 600px; background-position: center;background-size: cover;">
@@ -193,7 +205,7 @@
                 <div class="card">
                     <div class="card-header p-0 mx-3 mt-3 position-relative z-index-1">
                         <a href="javascript:;" class="d-block">
-                            <img src="https://images.unsplash.com/photo-1548460464-2a68877c7a5f?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cm9zZXxlbnwwfDJ8MHx8&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=60" class="img-fluid border-radius-lg shadow">
+                            <img src="https://images.unsplash.com/photo-1548460464-2a68877c7a5f?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cm9zZXxlbnwwfDJ8MHx8&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=60" class="img-fluid border-radius-lg shadow hover:scale-110">
                         </a>
                     </div>
 
@@ -224,7 +236,7 @@
                 <div class="card">
                     <div class="card-header p-0 mx-3 mt-3 position-relative z-index-1">
                         <a href="javascript:;" class="d-block">
-                            <img src="https://images.unsplash.com/photo-1528475563668-e15742001b92?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=3280&amp;q=80" class="img-fluid border-radius-lg shadow">
+                            <img src="https://images.unsplash.com/photo-1528475563668-e15742001b92?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=3280&amp;q=80" class="img-fluid border-radius-lg shadow hover:scale-110">
                         </a>
                     </div>
 
@@ -254,7 +266,7 @@
                 <div class="card">
                     <div class="card-header p-0 mx-3 mt-3 position-relative z-index-1">
                         <a href="javascript:;" class="d-block">
-                            <img src="https://images.unsplash.com/photo-1589292514550-ffa367e28682?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fHR1bGlwfGVufDB8MnwwfHw%3D&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=60" class="img-fluid border-radius-lg shadow">
+                            <img src="https://images.unsplash.com/photo-1589292514550-ffa367e28682?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fHR1bGlwfGVufDB8MnwwfHw%3D&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=60" class="img-fluid border-radius-lg shadow hover:scale-110">
                         </a>
                     </div>
 
@@ -284,7 +296,7 @@
                 <div class="card">
                     <div class="card-header p-0 mx-3 mt-3 position-relative z-index-1">
                         <a href="javascript:;" class="d-block">
-                            <img src="https://images.unsplash.com/photo-1502977249166-824b3a8a4d6d?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1180&amp;q=80" class="img-fluid border-radius-lg shadow">
+                            <img src="https://images.unsplash.com/photo-1502977249166-824b3a8a4d6d?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1180&amp;q=80" class="img-fluid border-radius-lg shadow hover:scale-110">
                         </a>
                     </div>
 
@@ -726,18 +738,34 @@
         <div class="row">
             <div class="col-8 mx-lg-auto text-lg-center">
                 <p class="text-sm text-secondary">
-                    Copyright © 2022 Soft &amp; Loopple by Creative Tim.
+                    Copyright © 2023 Saeed .
                 </p>
             </div>
         </div>
     </div>
 </footer>
-<div class="loopple-badge">Made with<a href="https://www.loopple.com"><img src="https://www.loopple.com/img/loopple-logo.png" class="loopple-ml-1" style="width:55px"></a></div>
+{{--<div class="loopple-badge">Made with<a href="https://www.loopple.com"><img src="https://www.loopple.com/img/loopple-logo.png" class="loopple-ml-1" style="width:55px"></a></div>--}}
 <script src="https://loopple.s3.eu-west-3.amazonaws.com/soft-ui-design-system/js/core/bootstrap.min.js" type="text/javascript"></script>
+@vite('resources/js/app.js')
 <script src="https://demos.creative-tim.com/soft-ui-design-system/assets/js/soft-design-system.min.js?v=1.0.5" type="text/javascript"></script>
 <script src="https://demos.creative-tim.com/soft-ui-design-system-pro/assets/js/plugins/countup.min.js" type="text/javascript"></script>
 <script src="https://demos.creative-tim.com/soft-ui-design-system-pro/assets/js/plugins/flatpickr.min.js"></script>
 <script>
+
+    function myFunction() {
+        var x = document.getElementById("mobile-menu");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+            document.getElementById("menu-button-open").style.display = "none";
+            document.getElementById("menu-button-close").style.display = "block";
+
+        } else {
+            x.style.display = "block";
+            document.getElementById("menu-button-close").style.display = "none";
+            document.getElementById("menu-button-open").style.display = "block";
+        }
+    }
+
     if (document.getElementById("state1")) {
         const countUp = new CountUp("state1", document.getElementById("state1").getAttribute("countTo"));
         if (!countUp.error) {

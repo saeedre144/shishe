@@ -19,11 +19,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/home', function () {
-    return view('home');
+    return view('front.home');
 });
-Route::get('/test', function () {
-    return view('test');
+Route::get('/contact', function () {
+    return view('front.contact');
 });
+Route::get('/about', function () {
+    return view('front.about');
+});
+
+
 Route::any('category/create', [CategoryController::class, 'createCategory'])->name('createCategory');
 Route::get('categories', [CategoryController::class, 'allCategories'])->name('allCategories');
 Route::any('category/edit/{id}', [CategoryController::class, 'editCategory'])->name('editCategory');
